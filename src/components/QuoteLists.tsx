@@ -1,3 +1,4 @@
+"use client";
 type Quote = {
   text: string;
   author: string;
