@@ -1,18 +1,21 @@
-import quotes  from "../data/quotes";
+import quotes from "@/data/quotes";
+
 type Quote = {
-    text: string;
+  text: string;
+  author: string;
 };
 
 type QuoteTopic = {
-    topic: string;
-    quotes: Quote[];
+  topic: string;
+  quotes: Quote[];
 };
 
 export default function filterQuotes(): QuoteTopic[] {
-    return quotes().map((quoteTopic: QuoteTopic) => ({
-        topic: quoteTopic.topic,
-        quotes: quoteTopic.quotes.map((quote: Quote) => ({
-            text: quote.text,
-        })),
-    }));
+  return quotes().map((quoteTopic: QuoteTopic) => ({
+    topic: quoteTopic.topic,
+    quotes: quoteTopic.quotes.map((quote: Quote) => ({
+      text: quote.text,
+      author: quote.author,
+    })),
+  }));
 }
