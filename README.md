@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Quote Generator
+A beautiful quote generator built with Next.js and React. Browse inspiring quotes by topic with a modern, responsive interface.
+Features
 
-## Getting Started
+🎨 Beautiful gradient UI with animations
+📱 Mobile responsive design
+🌙 Dark mode support
+🔍 Topic-based quote filtering
 
-First, run the development server:
+Tech Stack
 
-```bash
+Next.js 14+ (TypeScript)
+Tailwind CSS
+shadcn/ui components
+
+Installation
+bash# Clone and install
+git clone <repository-url>
+cd quote-generator
+npm install
+To install Shadcn and dependencies
+npx shadcn@latest init
+
+# Run development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Select a topic from the dropdown
+Browse the curated quotes
+Get inspired!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Project Structure
+├── components/
+│ ├── QuoteForm.tsx # Topic selection form
+│ └── QuoteLists.tsx # Quote display
+├── lib/
+│ └── filterQuotes.ts # Quote data & filtering
+└── app/
+└── page.tsx # Main page
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Adding Quotes
+Edit /lib/filterQuotes.ts:
+typescript{
+topic: "Your Topic",
+quotes: [
+{ text: "Your quote", author: "Author Name" }
+]
+}
