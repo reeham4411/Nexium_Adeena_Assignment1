@@ -22,7 +22,7 @@ export default function Page() {
   };
 
   return (
-    <main className="min-h-screen p-6">
+    <main className="min-h-screen p-6 fill-background bg-purple-300">
       <h1 className="text-3xl font-bold text-center mt-10">Quote Generator</h1>
       <QuoteForm onSearch={handleSearch} />
       <QuoteList quotes={quotes} topic={topic} />
