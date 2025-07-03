@@ -6,7 +6,6 @@ A beautiful quote generator built with Next.js and React. Browse inspiring quote
 
 - 🎨 Beautiful gradient UI with animations
 - 📱 Mobile responsive design
-- 🌙 Dark mode support
 - 🔍 Topic-based quote filtering
 
 ## Tech Stack
