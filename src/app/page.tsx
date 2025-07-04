@@ -4,6 +4,7 @@ import { useState } from "react";
 import QuoteForm from "@/components/QuoteForm";
 import QuoteList from "@/components/QuoteLists";
 import filterQuotes from "@/lib/filterQuotes";
+import { Analytics } from "@vercel/analytics/next";
 
 interface Quote {
   text: string;
